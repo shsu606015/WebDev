@@ -1,0 +1,346 @@
+/* ------------------------------- */
+/*              Basic              */
+/* ------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1;}
+.clearfix {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ------------------------------- */
+/*             Reused              */
+/* ------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+/*            heading              */
+h1,
+h2,
+h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2::after {
+    display: block;
+    height: 2px;
+    background-color: #e74c3c;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/*           papagraph             */
+.long {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.bot {
+    width: 70%;
+    margin: 15% 10%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/*             Icons               */
+.big-icon {
+    font-size: 300%;
+    display: block;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+/*            Buttons              */
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-ful:link,
+.btn-ful:visited {
+    background-color: #e74c3c;
+    border: 1px solid #e74c3c;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #e83725;
+}
+
+.btn-ful:hover,
+.btn-ful:active {
+    border: 1px solid #e74c3c;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #e74c3c;
+    color: #fff;
+}
+
+/* ------------------------------- */
+/*              info               */
+/* ------------------------------- */
+
+
+
+.info-box {
+    margin-top: 30px;
+}
+
+.info-box:first-child {
+    text-align: left;
+    padding-right: 1%;
+}
+
+.info-box:last-child {
+    margin-top: 0;
+    padding-left: 3%;
+}
+
+.myself {
+    width: 110%;
+    border-radius: 100%;
+}
+
+.info-p {
+    margin: 3% 4%;
+    line-height: 150%;
+    font-weight: 150%;
+}
+
+.info-skill {
+    text-align: left;
+    margin: 0 0;
+}
+
+.skill-head {
+    margin-bottom: 3%;
+    display: inline-block;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.myskill {
+    margin: 0 0 1% 20%;
+    list-style: none;
+}
+
+.myskill li::before {
+    /* for special character */
+    content: "\2022";
+    color: #e74c3c;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+
+/* ------------------------------- */
+/*             headers             */
+/* ------------------------------- */
+.section-projects {
+    overflow:auto;
+    background-color: #f5f5f5;
+}
+.section-projects, .long {
+    margin-bottom: 30px;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/CSUDH.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.CSUDH-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Main */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 40px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e74c3c;
+}
+
+/* Sticky nav */
+.sticky .main-nav {
+    margin: 15px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.959);
+    box-shadow: 0 2px 2px rgb(236, 236, 236);
+    z-index: 9999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 12px 0;
+    color: #555;
+
+}
+
+/* ------------------------------- */
+/*             contact             */
+/* ------------------------------- */
+
+.section-contact {
+    margin-top: -3%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/studentUnion.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.contact-box {
+    width: 1000px;
+    top: 20%;
+    left: 10%;
+    position: relative;
+}
+
+.contact-box h1 {
+    color: #fff;
+    font-size: 200%;
+    letter-spacing: 3px;
+}
+
+.contact-box p {
+    margin-top: 3%;
+    padding-left: 8%;
+    color: #fff;
+    font-size: 200%;
+    letter-spacing: 3px;
+}
+
+.back {
+    position: relative;
+    display: block;
+    margin-top: 20%;
+}
+
+.btn-back:link,
+.btn-back:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+}
+
+.btn-back:hover,
+.btn-back:active {
+    border: 1px solid #e74c3c;
+    color: #fff;
+    background-color: #e83725;
+}
